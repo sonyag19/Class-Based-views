@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>display</title>
+
+    </head>
+    <body>
+       <table border=1>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>delete item</th>
+                <th>View Details</th>
+                <th>Update</th>
+            </tr>
+            {% for i in a %}
+            <tr>
+                <td>{{i.username}}</td>
+                <td>{{i.email}}</td>
+                <td><a href="http://127.0.0.1:8000/new_app/delete/{{i.id}}">delete</a></td>
+                <td><a href="http://127.0.0.1:8000/new_app/detail/{{i.id}}">view detail</a></td>
+                <td><a href="http://127.0.0.1:8000/new_app/update/{{i.id}}">update data</a></td>
+            </tr>
+            {% endfor %}
+       </table>
+    </body>
+
+</html>
